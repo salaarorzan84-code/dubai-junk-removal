@@ -1,12 +1,12 @@
 /* =========================================================
    D2D WASTE REMOVAL
-   FINAL CLEAN PREMIUM CSS
+   CLEAN PREMIUM FINAL CSS
 ========================================================= */
 
 
-/* =========================
+/* =========================================================
    RESET
-========================= */
+========================================================= */
 
 * {
     margin: 0;
@@ -37,6 +37,10 @@ textarea {
     font-family: inherit;
 }
 
+img {
+    max-width: 100%;
+}
+
 .container {
     width: min(1180px, 92%);
     margin: 0 auto;
@@ -54,7 +58,7 @@ textarea {
     width: 100%;
     z-index: 99999;
     padding: 22px 0;
-    background: #0b1322;
+    background: #0b1322 !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -110,7 +114,7 @@ textarea {
     color: #ffffff !important;
     font-size: 13px;
     font-weight: 500;
-    transition: 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -118,14 +122,14 @@ textarea {
 }
 
 
-/* QUOTE BUTTON */
+/* NAV QUOTE BUTTON */
 
 .nav-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    background: #d4af37;
+    background: #d4af37 !important;
     color: #111111 !important;
 
     padding: 12px 21px;
@@ -137,11 +141,11 @@ textarea {
     margin-left: 22px;
 
     white-space: nowrap;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .nav-btn:hover {
-    background: #e6c76a;
+    background: #e6c76a !important;
     transform: translateY(-2px);
 }
 
@@ -154,7 +158,7 @@ textarea {
     background: transparent;
     border: none;
 
-    color: #ffffff;
+    color: #ffffff !important;
     font-size: 28px;
 
     cursor: pointer;
@@ -286,7 +290,7 @@ textarea {
     font-size: 14px;
     font-weight: 800;
 
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .primary-btn:hover {
@@ -312,7 +316,7 @@ textarea {
     font-size: 14px;
     font-weight: 700;
 
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .secondary-btn:hover {
@@ -409,45 +413,58 @@ textarea {
 
 /* =========================================================
    SECTION HEADING
+   SAME HEADING STYLE FOR ALL PAGES
 ========================================================= */
 
 .section-heading {
+    width: 100%;
     max-width: 680px;
 }
 
+.section-heading.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 .section-heading > span {
+    display: block;
+
     color: #b28a16;
 
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 800;
 
-    letter-spacing: 3px;
+    letter-spacing: 4px;
+    line-height: 1.2;
+
+    text-transform: uppercase;
 }
 
 .section-heading h2 {
-    font-size: clamp(36px, 4vw, 55px);
-
-    line-height: 1.1;
-    margin-top: 15px;
+    margin: 15px 0 0;
 
     color: #0b1220;
+
+    font-size: clamp(42px, 5vw, 60px);
+    font-weight: 700;
+
+    line-height: 1.08;
+    letter-spacing: -1px;
 }
 
 .section-heading h2 strong {
+    display: block;
     color: #b28a16;
 }
 
 .section-heading p {
+    margin-top: 20px;
+
     color: #626b78;
 
-    margin-top: 20px;
     font-size: 16px;
-}
-
-.center {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    line-height: 1.7;
 }
 
 
@@ -704,7 +721,7 @@ textarea {
 }
 
 
-/* GOLD CIRCLE */
+/* SERVICE GOLD CIRCLE */
 
 .service-card::after {
     content: "";
@@ -722,6 +739,8 @@ textarea {
     border-radius: 50%;
 
     z-index: 1;
+
+    pointer-events: none;
 }
 
 .service-card > * {
@@ -747,22 +766,23 @@ textarea {
 }
 
 .service-card h3 {
+    margin-top: 28px;
+
     color: #ffffff !important;
 
     font-size: 23px;
     font-weight: 800;
 
-    margin-top: 28px;
-
     text-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
 }
 
 .service-card p {
+    margin-top: 14px;
+
     color: #f1f1f1 !important;
 
     font-size: 14px;
-
-    margin-top: 14px;
+    line-height: 1.7;
 
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
 }
@@ -899,27 +919,41 @@ textarea {
 
     padding: 0;
     margin: 0;
+
+    overflow: hidden;
 }
 
 
-/* ================= CONTACT HEADING ================= */
+/* =========================================================
+   CONTACT HEADING
+   MATCHES OTHER PAGE HEADINGS
+========================================================= */
 
 .contact-heading {
     width: 100%;
-    padding: 75px 20px 55px;
+    max-width: 680px;
+
+    margin: 0 auto;
+
+    padding: 70px 20px 55px;
+
     box-sizing: border-box;
+
     text-align: center;
     background: #f7f5ef;
 }
 
 .contact-heading span {
     display: block;
-    margin: 0 0 22px;
 
-    color: #c9a227 !important;
+    margin: 0 0 15px;
+
+    color: #b28a16 !important;
+
     font-size: 12px !important;
     font-weight: 800 !important;
-    letter-spacing: 5px !important;
+
+    letter-spacing: 4px !important;
     line-height: 1.2;
 
     text-transform: uppercase;
@@ -928,51 +962,31 @@ textarea {
 .contact-heading h2 {
     margin: 0;
 
-    color: #0b1322 !important;
+    color: #0b1220 !important;
 
     font-size: clamp(42px, 5vw, 60px);
     font-weight: 700;
-    line-height: 1.08;
 
+    line-height: 1.08;
     letter-spacing: -1px;
 }
 
 .contact-heading h2 strong {
     display: block;
 
-    color: #c9a227 !important;
+    color: #b28a16 !important;
 }
 
 
-/* ================= CONTACT HEADING MOBILE ================= */
-
-@media (max-width: 768px) {
-
-    .contact-heading {
-        padding: 55px 20px 40px;
-    }
-
-    .contact-heading span {
-        margin-bottom: 18px;
-        font-size: 11px !important;
-        letter-spacing: 4px !important;
-    }
-
-    .contact-heading h2 {
-        font-size: 40px;
-        line-height: 1.1;
-    }
-
-}
-
-
-/* DARK CONTACT BOX */
+/* =========================================================
+   CONTACT BOX
+========================================================= */
 
 .contact-box {
     width: calc(100% - 120px);
     max-width: 1180px;
 
-    margin: 0 auto;
+    margin: 0 auto 80px;
 
     padding: 75px 48px;
 
@@ -1040,8 +1054,9 @@ textarea {
 
 .contact-details {
     display: flex;
+    flex-wrap: wrap;
 
-    gap: 50px;
+    gap: 30px 45px;
 
     margin: 0;
 }
@@ -1058,6 +1073,7 @@ textarea {
     color: #ffffff;
 
     font-size: 13px;
+    font-weight: 700;
 }
 
 .contact-details a {
@@ -1067,7 +1083,7 @@ textarea {
 
     text-decoration: none;
 
-    transition: 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .contact-details a:hover {
@@ -1075,7 +1091,9 @@ textarea {
 }
 
 
-/* QUOTE FORM */
+/* =========================================================
+   QUOTE FORM
+========================================================= */
 
 .quote-form {
     width: 100%;
@@ -1095,6 +1113,7 @@ textarea {
     color: #0b1220;
 
     font-size: 26px;
+    line-height: 1.2;
 }
 
 .quote-form input,
@@ -1109,7 +1128,6 @@ textarea {
     margin-bottom: 13px;
 
     border: 1px solid #dfe2e6;
-
     border-radius: 2px;
 
     background: #fafafa;
@@ -1131,7 +1149,6 @@ textarea {
 
 .quote-form textarea {
     min-height: 110px;
-
     resize: vertical;
 }
 
@@ -1325,6 +1342,15 @@ textarea {
     .about-cards {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .contact-container {
+        grid-template-columns: 1fr 0.9fr;
+        gap: 45px;
+    }
+
+    .contact-box {
+        padding: 60px 35px;
+    }
 }
 
 
@@ -1334,12 +1360,14 @@ textarea {
 
 @media (max-width: 768px) {
 
-    /* NAVBAR */
+    /* =========================
+       NAVBAR
+    ========================= */
 
     .navbar {
         padding: 18px 0;
 
-        background: #0b1322;
+        background: #0b1322 !important;
     }
 
     .nav-container {
@@ -1400,7 +1428,7 @@ textarea {
 
         padding: 10px 20px;
 
-        background: #0b1322;
+        background: #0b1322 !important;
 
         z-index: 99998;
 
@@ -1424,7 +1452,9 @@ textarea {
     }
 
 
-    /* HERO */
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
         min-height: 760px;
@@ -1506,7 +1536,9 @@ textarea {
     }
 
 
-    /* TRUST BAR */
+    /* =========================
+       TRUST BAR
+    ========================= */
 
     .trust-bar-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1537,7 +1569,9 @@ textarea {
     }
 
 
-    /* SECTIONS */
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
 
     .about,
     .services,
@@ -1545,16 +1579,29 @@ textarea {
         padding: 80px 0;
     }
 
+    .section-heading {
+        max-width: 100%;
+    }
+
+    .section-heading > span {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
     .section-heading h2 {
         font-size: 38px;
+        line-height: 1.1;
     }
 
     .section-heading p {
         font-size: 15px;
+        line-height: 1.7;
     }
 
 
-    /* ABOUT */
+    /* =========================
+       ABOUT
+    ========================= */
 
     .about-cards {
         grid-template-columns: 1fr;
@@ -1589,7 +1636,9 @@ textarea {
     }
 
 
-    /* SERVICES */
+    /* =========================
+       SERVICES
+    ========================= */
 
     .services-grid {
         grid-template-columns: 1fr;
@@ -1604,7 +1653,9 @@ textarea {
     }
 
 
-    /* WHY */
+    /* =========================
+       WHY US
+    ========================= */
 
     .why-grid {
         grid-template-columns: 1fr;
@@ -1652,20 +1703,39 @@ textarea {
     }
 
 
-    /* CONTACT */
+    /* =========================
+       CONTACT HEADING
+    ========================= */
 
     .contact-heading {
-        padding: 35px 20px;
+        max-width: 100%;
+
+        padding: 70px 20px 45px;
     }
 
     .contact-heading span {
+        margin-bottom: 15px;
+
         font-size: 11px !important;
 
-        letter-spacing: 4px !important;
+        letter-spacing: 3px !important;
     }
+
+    .contact-heading h2 {
+        font-size: 38px;
+
+        line-height: 1.1;
+    }
+
+
+    /* =========================
+       CONTACT BOX
+    ========================= */
 
     .contact-box {
         width: 100%;
+
+        margin: 0;
 
         padding: 55px 20px;
     }
@@ -1680,6 +1750,12 @@ textarea {
         font-size: 42px;
     }
 
+    .contact-text > p {
+        font-size: 15px;
+
+        margin-bottom: 30px;
+    }
+
     .contact-details {
         flex-direction: column;
 
@@ -1690,8 +1766,14 @@ textarea {
         padding: 28px;
     }
 
+    .quote-form h3 {
+        font-size: 24px;
+    }
 
-    /* FOOTER */
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     .footer-content {
         padding: 40px 20px;
@@ -1762,5 +1844,10 @@ textarea {
 
     .mobile-menu-btn {
         font-size: 25px;
+    }
+
+    .section-heading h2,
+    .contact-heading h2 {
+        font-size: 34px;
     }
 }
