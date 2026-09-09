@@ -75,28 +75,161 @@ img {
 }
 
 
-/* LOGO */
+/* =========================
+   UNIQUE PREMIUM D2D LOGO
+========================= */
 
 .logo {
     display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+/* Logo Symbol */
+.logo-mark {
+    position: relative;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #d4af37;
+    border-radius: 14px 14px 14px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        145deg,
+        #172235,
+        #0a101b
+    );
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.3),
+        inset 0 0 0 1px rgba(255,255,255,0.04);
+    overflow: hidden;
+}
+
+/* Gold corner accent */
+.logo-mark::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: -11px;
+    right: -11px;
+    background: #d4af37;
+    transform: rotate(45deg);
+}
+
+/* D */
+.logo-d {
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+/* 2 */
+.logo-2 {
+    position: absolute;
+    right: 7px;
+    bottom: 8px;
+    color: #d4af37;
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+/* Motion arrow */
+.logo-arrow {
+    position: absolute;
+    right: 5px;
+    top: 6px;
+    color: #d4af37;
+    font-size: 12px;
+    font-weight: 900;
+    transform: rotate(-35deg);
+}
+
+/* Brand name */
+.logo-name {
+    display: flex;
     flex-direction: column;
     line-height: 1;
-    flex-shrink: 0;
 }
 
-.logo-main {
-    color: #e6c76a;
-    font-size: 23px;
-    font-weight: 800;
-    letter-spacing: 4px;
+.logo-name > div {
+    display: flex;
+    align-items: baseline;
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: 2px;
 }
 
-.logo-sub {
+.logo-name span {
     color: #ffffff;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 2.8px;
+}
+
+.logo-name b {
+    color: #d4af37;
+    font-weight: 900;
+}
+
+.logo-name small {
     margin-top: 6px;
+    color: #d4af37;
+    font-size: 7px;
+    font-weight: 800;
+    letter-spacing: 2.8px;
+    white-space: nowrap;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .logo {
+        gap: 9px;
+    }
+
+    .logo-mark {
+        width: 43px;
+        height: 43px;
+        border-radius: 11px 11px 11px 3px;
+    }
+
+    .logo-d {
+        left: 7px;
+        top: 7px;
+        font-size: 22px;
+    }
+
+    .logo-2 {
+        right: 6px;
+        bottom: 7px;
+        font-size: 20px;
+    }
+
+    .logo-arrow {
+        right: 4px;
+        top: 5px;
+        font-size: 9px;
+    }
+
+    .logo-name > div {
+        font-size: 22px;
+        letter-spacing: 1.5px;
+    }
+
+    .logo-name small {
+        margin-top: 5px;
+        font-size: 6px;
+        letter-spacing: 2px;
+    }
 }
 
 
@@ -1849,5 +1982,1342 @@ img {
     .section-heading h2,
     .contact-heading h2 {
         font-size: 34px;
+    }
+}
+
+/* =========================================================
+   PREMIUM FLOATING CONTACT BUTTONS
+   PHONE + WHATSAPP
+========================================================= */
+
+.quick-buttons {
+    position: fixed;
+    top: 115px;
+    right: 22px;
+    z-index: 99999;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    width: 52px;
+}
+
+.quick-buttons a {
+    flex: 0 0 52px;
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    margin: 0;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 7px 18px rgba(0, 0, 0, 0.20),
+        0 2px 5px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.quick-buttons a:hover {
+    transform: translateY(-2px) scale(1.06);
+
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.24),
+        0 3px 8px rgba(0, 0, 0, 0.14);
+}
+
+/* Works with the professional image logos */
+.quick-buttons img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: none;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
+}
+
+/* Also works if SVG icons are used */
+.quick-buttons svg {
+    display: block;
+
+    width: 25px;
+    height: 25px;
+
+    max-width: 25px;
+    max-height: 25px;
+
+    fill: currentColor;
+}
+
+/* PHONE */
+.quick-buttons .phone-btn {
+    background: #0b1322;
+    color: #ffffff;
+}
+
+/* WHATSAPP */
+.quick-buttons .whatsapp-btn {
+    background: #25D366;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   FLOATING BUTTONS — MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .quick-buttons {
+        top: 88px;
+        right: 14px;
+
+        width: 48px;
+        gap: 10px;
+    }
+
+    .quick-buttons a {
+        flex-basis: 48px;
+
+        width: 48px;
+        height: 48px;
+    }
+
+    .quick-buttons img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .quick-buttons svg {
+        width: 23px;
+        height: 23px;
+
+        max-width: 23px;
+        max-height: 23px;
+    }
+}
+
+
+/* =========================================================
+   FLOATING BUTTONS — VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .quick-buttons {
+        top: 82px;
+        right: 10px;
+
+        width: 46px;
+        gap: 8px;
+    }
+
+    .quick-buttons a {
+        flex-basis: 46px;
+
+        width: 46px;
+        height: 46px;
+    }
+
+    .quick-buttons img {
+        width: 46px;
+        height: 46px;
+    }
+
+    .quick-buttons svg {
+        width: 22px;
+        height: 22px;
+
+        max-width: 22px;
+        max-height: 22px;
+    }
+}
+.quick-buttons .whatsapp-btn {
+    background: #25D366;
+    color: #ffffff;
+}
+
+.quick-buttons .whatsapp-btn svg {
+    width: 25px;
+    height: 25px;
+    fill: #ffffff;
+    display: block;
+}
+/* PREMIUM FLOATING BUTTONS */
+
+.quick-buttons {
+    position: fixed;
+    top: 115px;
+    right: 22px;
+    z-index: 99999;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.quick-buttons a {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.20);
+
+    transition: transform 0.25s ease;
+}
+
+.quick-buttons a:hover {
+    transform: scale(1.07);
+}
+
+.quick-buttons svg {
+    width: 25px;
+    height: 25px;
+    fill: #ffffff;
+}
+
+.phone-btn {
+    background: #0b1322;
+}
+
+.whatsapp-btn {
+    background: #25D366;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .quick-buttons {
+        top: 88px;
+        right: 14px;
+        gap: 10px;
+    }
+
+    .quick-buttons a {
+        width: 48px;
+        height: 48px;
+    }
+
+    .quick-buttons svg {
+        width: 23px;
+        height: 23px;
+    }
+
+}
+/* =========================================================
+   MOBILE CONTACT SECTION FIX
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .contact-section {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .contact-heading {
+        width: 100%;
+        max-width: 100%;
+        padding: 55px 20px 40px;
+        box-sizing: border-box;
+    }
+
+    .contact-box {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0 15px 50px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .contact-container {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        box-sizing: border-box;
+    }
+
+    .contact-text {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contact-details {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contact-details > div {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .quote-form {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .quote-form input,
+    .quote-form select,
+    .quote-form textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .quote-form button {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+}
+/* =========================================================
+   CONTACT SECTION - FINAL CLEAN SIZE
+========================================================= */
+
+.contact-section {
+    width: 100%;
+    overflow: hidden;
+}
+
+.contact-heading {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 55px 20px 45px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.contact-box {
+    width: 100%;
+    margin: 0 auto;
+    padding: 45px 20px 55px;
+    box-sizing: border-box;
+    background: #0b1322;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    gap: 60px;
+
+    align-items: center;
+}
+
+.contact-text {
+    width: 100%;
+    min-width: 0;
+}
+
+.contact-text > p {
+    margin-bottom: 30px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-details > div {
+    min-width: 0;
+}
+
+.quote-form {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 28px;
+    box-sizing: border-box;
+}
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .contact-heading {
+        padding: 45px 16px 35px;
+    }
+
+    .contact-heading h2 {
+        font-size: 38px;
+    }
+
+    .contact-box {
+        padding: 35px 15px 45px;
+    }
+
+    .contact-container {
+        width: 100%;
+        max-width: 100%;
+
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .contact-text {
+        width: 100%;
+    }
+
+    .contact-details {
+        gap: 18px;
+    }
+
+    .quote-form {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 22px;
+    }
+
+    .quote-form input,
+    .quote-form select,
+    .quote-form textarea,
+    .quote-form button {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+}
+/* =========================================================
+   FINAL CONTACT SECTION FIX
+========================================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* CONTACT SECTION */
+
+.contact-section {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    background: #f7f5ef;
+}
+
+
+/* CONTACT HEADING */
+
+.contact-heading {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    padding: 75px 20px 55px;
+}
+
+.contact-heading span {
+    display: block;
+    margin-bottom: 18px;
+}
+
+.contact-heading h2 {
+    margin: 0;
+}
+
+
+/* DARK CONTACT BOX */
+
+.contact-box {
+    width: min(1180px, 92%);
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 70px 50px;
+
+    background: #0b1220;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+/* CONTACT GRID */
+
+.contact-container {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(380px, 0.85fr);
+
+    gap: 60px;
+
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+
+/* IMPORTANT - GRID OVERFLOW FIX */
+
+.contact-text,
+.quote-form {
+    min-width: 0;
+    width: 100%;
+}
+
+
+/* LEFT TEXT */
+
+.contact-text {
+    color: #ffffff;
+}
+
+.contact-text > p {
+    max-width: 520px;
+
+    margin: 0 0 38px;
+
+    color: #aeb5c0;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* CONTACT DETAILS */
+
+.contact-details {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 30px 45px;
+
+    width: 100%;
+}
+
+.contact-details > div {
+    min-width: 130px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.contact-details strong {
+    color: #ffffff;
+
+    font-size: 13px;
+}
+
+.contact-details a {
+    color: #e6c76a;
+
+    font-size: 14px;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* QUOTE FORM */
+
+.quote-form {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    padding: 38px;
+
+    margin: 0;
+
+    background: #ffffff;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+.quote-form h3 {
+    color: #0b1220;
+
+    margin: 0 0 25px;
+
+    font-size: 26px;
+}
+
+
+/* FORM FIELDS */
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 15px;
+
+    margin: 0 0 13px;
+
+    border: 1px solid #dfe2e6;
+
+    background: #fafafa;
+
+    color: #0b1220;
+}
+
+.quote-form textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+
+/* FORM BUTTON */
+
+.quote-form button {
+    display: block;
+
+    width: 100%;
+
+    padding: 17px;
+
+    border: none;
+
+    box-sizing: border-box;
+
+    background: #c9a227;
+
+    color: #0b1220;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   FLOATING CALL + WHATSAPP BUTTONS
+========================================================= */
+
+.floating-contact {
+    position: fixed;
+
+    top: 50%;
+    right: 22px;
+
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+
+    z-index: 9999;
+}
+
+.floating-contact a {
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.22);
+
+    transition: transform 0.25s ease;
+}
+
+.floating-contact a:hover {
+    transform: scale(1.08);
+}
+
+.call-float {
+    background: #0b1220;
+}
+
+.whatsapp-float {
+    background: #25d366;
+}
+
+.floating-contact img {
+    width: 27px;
+    height: 27px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =========================================================
+   TABLET FIX
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .contact-box {
+        width: min(1180px, 92%);
+        padding: 55px 35px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .quote-form {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE FIX
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .contact-heading {
+        padding: 55px 20px 40px;
+    }
+
+    .contact-heading h2 {
+        font-size: 40px;
+        line-height: 1.1;
+    }
+
+    .contact-box {
+        width: 100%;
+
+        padding: 50px 20px;
+    }
+
+    .contact-container {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .contact-details {
+        flex-direction: column;
+
+        gap: 22px;
+    }
+
+    .quote-form {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 28px;
+
+        margin: 0;
+    }
+
+    .floating-contact {
+        right: 14px;
+
+        gap: 10px;
+    }
+
+    .floating-contact a {
+        width: 48px;
+        height: 48px;
+    }
+
+    .floating-contact img {
+        width: 24px;
+        height: 24px;
+    }
+
+}
+/* =========================================================
+   FINAL FIX - QUOTE FORM MUST NOT FLOAT
+========================================================= */
+
+.quote-form {
+    position: static !important;
+
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    transform: none !important;
+
+    float: none !important;
+
+    width: 100% !important;
+    max-width: 450px !important;
+
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* CONTACT CONTAINER */
+
+.contact-container {
+    position: static !important;
+
+    width: 100% !important;
+    max-width: 1150px !important;
+
+    margin: 0 auto !important;
+
+    display: grid !important;
+
+    grid-template-columns: minmax(0, 1fr) minmax(380px, 450px) !important;
+
+    gap: 60px !important;
+
+    align-items: center !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* CONTACT BOX */
+
+.contact-box {
+    position: static !important;
+
+    width: min(1180px, 92%) !important;
+
+    margin: 0 auto !important;
+
+    box-sizing: border-box !important;
+
+    overflow: hidden !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .contact-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    .quote-form {
+        width: 100% !important;
+        max-width: 600px !important;
+
+        margin: 0 auto !important;
+    }
+
+    .contact-box {
+        width: 92% !important;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .contact-box {
+        width: 100% !important;
+        padding: 40px 15px !important;
+    }
+
+    .contact-container {
+        width: 100% !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 35px !important;
+    }
+
+    .quote-form {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 22px !important;
+    }
+
+}
+.quote-form {
+    position: static !important;
+}
+/* ================= CONTACT FOOTER SPACE ================= */
+
+.contact-section {
+    padding-bottom: 100px;
+}
+
+.contact-box {
+    margin-bottom: 100px;
+}
+
+.footer {
+    margin-top: 0;
+}
+/* ==============================
+   D2D PREMIUM CORPORATE LOGO
+============================== */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+}
+
+/* Main D2D emblem */
+.logo-mark {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #0b1322;
+    border: 1px solid rgba(212, 175, 55, 0.8);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 4px rgba(212, 175, 55, 0.08),
+        0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Gold inner ring */
+.logo-mark::after {
+    content: "";
+    position: absolute;
+    inset: 5px;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 50%;
+}
+
+/* D */
+.logo-d {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 1;
+    z-index: 2;
+}
+
+/* 2 */
+.logo-2 {
+    position: absolute;
+    right: 9px;
+    bottom: 9px;
+
+    color: #d4af37;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1;
+    z-index: 2;
+}
+
+/* Remove old arrow */
+.logo-arrow {
+    display: none;
+}
+
+
+/* ==============================
+   BRAND NAME
+============================== */
+
+.logo-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1;
+}
+
+.logo-name > div {
+    display: flex;
+    align-items: center;
+
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+    line-height: 1;
+}
+
+.logo-name span {
+    color: #ffffff;
+}
+
+.logo-name b {
+    color: #d4af37;
+    font-weight: 900;
+}
+
+.logo-name small {
+    display: block;
+    margin-top: 6px;
+
+    color: #d4af37;
+    font-size: 7px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 600px) {
+
+    .logo {
+        gap: 10px;
+    }
+
+    .logo-mark {
+        width: 41px;
+        height: 41px;
+    }
+
+    .logo-mark::after {
+        inset: 4px;
+    }
+
+    .logo-d {
+        left: 8px;
+        top: 8px;
+        font-size: 19px;
+    }
+
+    .logo-2 {
+        right: 7px;
+        bottom: 7px;
+        font-size: 17px;
+    }
+
+    .logo-name > div {
+        font-size: 21px;
+        letter-spacing: 2px;
+    }
+
+    .logo-name small {
+        margin-top: 5px;
+        font-size: 5.5px;
+        letter-spacing: 2.2px;
+    }
+}
+/* =================================
+   PREMIUM GLOW TRUCK LOGO
+================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+
+/* TRUCK LOGO BOX */
+
+.premium-truck-logo {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(145deg, #18263a, #070d17);
+
+    border: 1px solid rgba(212, 175, 55, 0.8);
+
+    box-shadow:
+        0 0 12px rgba(212, 175, 55, 0.35),
+        0 0 28px rgba(212, 175, 55, 0.12),
+        inset 0 0 18px rgba(212, 175, 55, 0.06);
+
+    overflow: hidden;
+}
+
+
+/* GOLD LIGHT EFFECT */
+
+.premium-truck-logo::before {
+    content: "";
+
+    position: absolute;
+
+    width: 80px;
+    height: 18px;
+
+    top: -10px;
+    left: -15px;
+
+    background: rgba(255,255,255,0.25);
+
+    transform: rotate(-35deg);
+
+    filter: blur(8px);
+
+    opacity: 0.7;
+}
+
+
+/* SVG */
+
+.premium-truck-logo svg {
+    width: 40px;
+    height: 40px;
+
+    overflow: visible;
+}
+
+
+/* GLOW */
+
+.truck-glow {
+    fill: none;
+    stroke: #d4af37;
+    stroke-width: 1;
+
+    opacity: 0.45;
+
+    filter:
+        drop-shadow(0 0 5px #d4af37)
+        drop-shadow(0 0 10px rgba(212,175,55,0.5));
+}
+
+
+/* TRUCK BODY */
+
+.truck-body {
+    fill: #ffffff;
+    stroke: #d4af37;
+    stroke-width: 2;
+
+    filter:
+        drop-shadow(0 0 3px rgba(255,255,255,0.5))
+        drop-shadow(0 0 5px rgba(212,175,55,0.4));
+}
+
+
+/* CABIN */
+
+.truck-cabin {
+    fill: #d4af37;
+    stroke: #ffffff;
+    stroke-width: 1.5;
+}
+
+
+/* WINDOW */
+
+.truck-window {
+    fill: #101a2a;
+    stroke: #ffffff;
+    stroke-width: 1;
+}
+
+
+/* TRUCK DETAIL */
+
+.truck-line {
+    fill: none;
+    stroke: #d4af37;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+
+/* WHEELS */
+
+.truck-wheel {
+    fill: #080d16;
+    stroke: #d4af37;
+    stroke-width: 2;
+
+    filter:
+        drop-shadow(0 0 4px rgba(212,175,55,0.4));
+}
+
+
+/* WHEEL CENTERS */
+
+.wheel-center {
+    fill: #ffffff;
+}
+
+
+/* SHINE */
+
+.truck-shine {
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2;
+
+    stroke-linecap: round;
+
+    opacity: 0.9;
+
+    filter:
+        drop-shadow(0 0 4px #ffffff)
+        drop-shadow(0 0 8px #d4af37);
+}
+
+
+/* =================================
+   BRAND NAME
+================================= */
+
+.logo-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-title {
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.logo-title span {
+    color: #ffffff;
+}
+
+.logo-title b {
+    color: #d4af37;
+    font-weight: 900;
+}
+
+.logo-name small {
+    margin-top: 6px;
+
+    color: #d4af37;
+
+    font-size: 7px;
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+
+    white-space: nowrap;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .logo {
+        gap: 9px;
+    }
+
+    .premium-truck-logo {
+        width: 43px;
+        height: 43px;
+        border-radius: 12px;
+    }
+
+    .premium-truck-logo svg {
+        width: 34px;
+        height: 34px;
+    }
+
+    .logo-title {
+        font-size: 22px;
+        letter-spacing: 1.5px;
+    }
+
+    .logo-name small {
+        font-size: 5.5px;
+        letter-spacing: 1.8px;
     }
 }
