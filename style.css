@@ -3321,3 +3321,15 @@ body {
         letter-spacing: 1.8px;
     }
 }
+/* Call button - WhatsApp green */
+.phone-btn {
+    background: #25D366 !important;
+}
+
+.phone-btn:hover {
+    background: #20bd5a !important;
+}
+
+.phone-btn svg {
+    fill: #ffffff !important;
+}
