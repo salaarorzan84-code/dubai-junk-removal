@@ -307,19 +307,14 @@ img {
     min-height: 850px;
     position: relative;
 
-    display: flex;
-    align-items: center;
-
-    background:
+    background-image:
         linear-gradient(
             90deg,
-            rgba(3, 9, 18, 0.97) 0%,
-            rgba(3, 9, 18, 0.90) 28%,
-            rgba(3, 9, 18, 0.68) 52%,
-            rgba(3, 9, 18, 0.38) 76%,
-            rgba(3, 9, 18, 0.28) 100%
+            rgba(5, 12, 24, 0.88) 0%,
+            rgba(5, 12, 24, 0.55) 42%,
+            rgba(5, 12, 24, 0.12) 100%
         ),
-        url("https://images.pexels.com/photos/31328717/pexels-photo-31328717.jpeg?auto=compress&cs=tinysrgb&w=2000");
+        url("images/hero-truck.jpg");
 
     background-size: cover;
     background-position: center;
@@ -396,8 +391,17 @@ img {
     margin-top: 28px;
 }
 
+/* HERO HEADING POSITION */
 
-/* HERO BUTTONS */
+@media (min-width: 601px) {
+    .hero-content {
+        padding-top: 160px;
+    }
+}
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
 
 .hero-buttons {
     display: flex;
@@ -458,6 +462,8 @@ img {
 }
 
 
+
+
 /* HERO TRUST */
 
 .hero-trust {
@@ -492,6 +498,50 @@ img {
     height: 38px;
     background: rgba(255, 255, 255, 0.2);
 }
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 760px !important;
+
+        background-size: 100% 100% !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+
+    .hero-content {
+        padding: 80px 6% 0 !important;
+    }
+
+    .hero-text {
+        max-width: 100% !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+
+    .hero h1 {
+        font-size: 42px !important;
+        line-height: 1.08 !important;
+        margin: 0 auto !important;
+    }
+
+    .hero-buttons {
+        justify-content: center !important;
+        flex-direction: column !important;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .hero-trust {
+        justify-content: center !important;
+    }
+
+}
+
 
 
 /* =========================================================
@@ -1610,16 +1660,23 @@ img {
     }
 
     .hero-text {
-        max-width: 100%;
-    }
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto;
+}
 
-    .hero-label {
-        font-size: 9px;
+.hero h1 {
+    margin-left: auto;
+    margin-right: auto;
+}
 
-        letter-spacing: 2px;
+.hero-buttons {
+    justify-content: center;
+}
 
-        margin-bottom: 20px;
-    }
+.hero-trust {
+    justify-content: center;
+}
 
     .hero h1 {
         font-size: 44px;
@@ -3332,4 +3389,87 @@ body {
 
 .phone-btn svg {
     fill: #ffffff !important;
+}
+.hero h1 {
+    text-shadow:
+        3px 3px 8px rgba(0, 0, 0, 0.75),
+        0 0 18px rgba(0, 0, 0, 0.35);
+}
+.hero h1 strong {
+    text-shadow:
+        3px 3px 8px rgba(0, 0, 0, 0.75),
+        0 0 14px rgba(212, 175, 55, 0.25);
+}
+/* =========================
+   HERO BACKGROUND FIX
+========================= */
+
+.hero {
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(5, 12, 24, 0.82) 0%,
+            rgba(5, 12, 24, 0.45) 40%,
+            rgba(5, 12, 24, 0.08) 100%
+        ),
+        url("images/hero-truck.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* FINAL HERO IMAGE FIX */
+
+.hero {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(5, 12, 24, 0.82) 0%,
+            rgba(5, 12, 24, 0.45) 45%,
+            rgba(5, 12, 24, 0.10) 100%
+        ),
+        url("images/hero-truck.jpg") !important;
+
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+/* Premium shadow behind hero content */
+
+.hero-content {
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.55);
+}
+
+.hero h1 {
+    text-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.75),
+        0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.hero h1 strong {
+    text-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.75),
+        0 0 16px rgba(212, 175, 55, 0.18);
+}
+/* =================================
+   MOBILE HERO IMAGE FIX
+================================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 720px;
+
+        background-size: auto 100% !important;
+        background-position: 60% center !important;
+        background-repeat: no-repeat !important;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 90%;
+    }
 }
