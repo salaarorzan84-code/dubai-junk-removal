@@ -3423,3 +3423,16 @@ body {
     display: none !important;
     content: none !important;
 }
+/* MOBILE NAVBAR LINE FIX */
+@media (max-width: 768px) {
+
+    .navbar {
+        border-bottom: none !important;
+        box-shadow: none !important;
+    }
+
+    body {
+        padding-top: 86px !important;
+    }
+
+}
