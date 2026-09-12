@@ -19,6 +19,7 @@ html {
 }
 
 body {
+    padding-top: 96px;
     font-family: Arial, Helvetica, sans-serif;
     background: #f3f1ed;
     color: #111827;
@@ -52,14 +53,13 @@ img {
 ========================================================= */
 
 .navbar {
-    position: sticky;
+    position: fixed !important;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 99999;
     padding: 22px 0;
     background: #0b1322 !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav-container {
@@ -82,153 +82,53 @@ img {
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     text-decoration: none;
 }
 
-/* Logo Symbol */
-.logo-mark {
-    position: relative;
+.logo img {
     width: 52px;
     height: 52px;
-    border: 2px solid #d4af37;
-    border-radius: 14px 14px 14px 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(
-        145deg,
-        #172235,
-        #0a101b
-    );
-    box-shadow:
-        0 8px 22px rgba(0, 0, 0, 0.3),
-        inset 0 0 0 1px rgba(255,255,255,0.04);
-    overflow: hidden;
+    object-fit: contain;
+    display: block;
 }
 
-/* Gold corner accent */
-.logo-mark::before {
-    content: "";
-    position: absolute;
-    width: 22px;
-    height: 22px;
-    top: -11px;
-    right: -11px;
-    background: #d4af37;
-    transform: rotate(45deg);
-}
-
-/* D */
-.logo-d {
-    position: absolute;
-    left: 9px;
-    top: 9px;
-    color: #ffffff;
-    font-size: 27px;
-    font-weight: 900;
-    line-height: 1;
-}
-
-/* 2 */
-.logo-2 {
-    position: absolute;
-    right: 7px;
-    bottom: 8px;
-    color: #d4af37;
-    font-size: 25px;
-    font-weight: 900;
-    line-height: 1;
-}
-
-/* Motion arrow */
-.logo-arrow {
-    position: absolute;
-    right: 5px;
-    top: 6px;
-    color: #d4af37;
-    font-size: 12px;
-    font-weight: 900;
-    transform: rotate(-35deg);
-}
-
-/* Brand name */
-.logo-name {
+.logo-text {
     display: flex;
     flex-direction: column;
-    line-height: 1;
 }
 
-.logo-name > div {
-    display: flex;
-    align-items: baseline;
-    font-size: 27px;
+.logo-title {
+    font-size: 24px;
     font-weight: 900;
-    letter-spacing: 2px;
+    line-height: 1;
+    letter-spacing: 1px;
 }
 
-.logo-name span {
+.logo-title span {
     color: #ffffff;
 }
 
-.logo-name b {
-    color: #d4af37;
-    font-weight: 900;
+.logo-title b {
+    color: #e6c76a;
 }
 
-.logo-name small {
-    margin-top: 6px;
-    color: #d4af37;
+.logo-text small {
+    color: #e6c76a;
     font-size: 7px;
     font-weight: 800;
-    letter-spacing: 2.8px;
-    white-space: nowrap;
+    letter-spacing: 1.8px;
+    margin-top: 5px;
 }
-
 
 /* =========================
    MOBILE
 ========================= */
 
 @media (max-width: 600px) {
-
-    .logo {
-        gap: 9px;
-    }
-
-    .logo-mark {
-        width: 43px;
-        height: 43px;
-        border-radius: 11px 11px 11px 3px;
-    }
-
-    .logo-d {
-        left: 7px;
-        top: 7px;
-        font-size: 22px;
-    }
-
-    .logo-2 {
-        right: 6px;
-        bottom: 7px;
-        font-size: 20px;
-    }
-
-    .logo-arrow {
-        right: 4px;
-        top: 5px;
-        font-size: 9px;
-    }
-
-    .logo-name > div {
-        font-size: 22px;
-        letter-spacing: 1.5px;
-    }
-
-    .logo-name small {
-        margin-top: 5px;
-        font-size: 6px;
-        letter-spacing: 2px;
+    .logo img {
+        width: 58px;
+        height: 50px;
     }
 }
 
@@ -3472,4 +3372,54 @@ body {
         z-index: 2;
         max-width: 90%;
     }
+}
+/* PREMIUM LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.premium-truck-logo {
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+}
+
+.logo-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-title {
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+.logo-title span {
+    color: #ffffff;
+}
+
+.logo-title b {
+    color: #e6c76a;
+}
+
+.logo-name small {
+    color: #e6c76a;
+    font-size: 7px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+/* REMOVE LINE BELOW NAVBAR */
+.navbar {
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+.navbar::after {
+    display: none !important;
+    content: none !important;
 }
