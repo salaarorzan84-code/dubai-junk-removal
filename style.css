@@ -524,6 +524,7 @@ img {
     text-transform: uppercase;
 }
 
+.section-heading h1,
 .section-heading h2 {
     margin: 15px 0 0;
 
@@ -536,6 +537,7 @@ img {
     letter-spacing: -1px;
 }
 
+.section-heading h1 strong,
 .section-heading h2 strong {
     display: block;
     color: #b28a16;
