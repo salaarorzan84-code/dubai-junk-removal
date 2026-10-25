@@ -2,7 +2,7 @@
 
 // Paste your Web3Forms Access Key between the quotes.
 // Until you do, the form will open WhatsApp with the customer's details instead.
-const WEB3FORMS_KEY = "8bbd741a-32f1-42d0-b0f7-e741495ae2ed;
+const WEB3FORMS_KEY = "8bbd741a-32f1-42d0-b0f7-e741495ae2ed";
 
 const WHATSAPP_NUMBER = "971524413992";
 
